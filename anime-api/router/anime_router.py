@@ -79,7 +79,7 @@ def anime_popular():
 
 
 @app.route('/recommendation/<id>', methods=['GET'])
-def similar_anime_user_reviewid(id):
+def similar_anime_user_review_and_activity(id):
     try:
         anime_rev = AnimeInfo.similar_anime_by_user_review(int(id))
         anime_usr_act = AnimeInfo.similar_anime_by_user_activities(int(id))

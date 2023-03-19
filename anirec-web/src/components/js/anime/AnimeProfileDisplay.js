@@ -23,6 +23,7 @@ const AnimeProfileDisplay = ({animeInfo, userActivity, setUserActivity, recommen
   })
 
   const content = () => {
+    console.log(hght)
     if (hght > 331){
       const mystyle = {
         marginTop: '-12.0%'
@@ -61,7 +62,7 @@ const AnimeProfileDisplay = ({animeInfo, userActivity, setUserActivity, recommen
     </div>
     }else if (hght > 226 && hght < 252) {
       const mystyle = {
-        marginTop: '-6%'
+        marginTop: '-4%'
       }
       return <div className='content' style={mystyle}>
       {animeInfo.character ? <AnimeProfileDashboard 

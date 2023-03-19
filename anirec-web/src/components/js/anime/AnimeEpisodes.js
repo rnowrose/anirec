@@ -22,15 +22,16 @@ const AnimeEpisodes = ({anime_id}) => {
   return (
     <div className='anime-summary'>
       <h2>Anime Episodes</h2>
-      {data.anime_episodes ? <ul>
+      {data.anime_episodes ? <div> <ul>
         {data.anime_episodes.length ? data.anime_episodes.map((epi, id) => 
           <li key={id}>
               <a href={`${epi.url}`}>{epi.name}</a>
-          </li>
-        ): <div><img src={loading_gif} alt='loading' /> <h3>Episodes Not Available Please check other sites for the episodes of this anime</h3></div>}
-        </ul> :
+          </li>  
+        ): <div><img src={loading_gif} alt='loading' /> <h3>Episodes Not Available Please check other sites for the episodes of this anime</h3></div>
+        }
+        </ul> &nbsp; <div> Episodes can be watched on <b>Crunchyroll</b></div></div> :
        <div><img src={loading_gif} alt='loading' /> <h3>Episodes Not Available Please check other sites for the episodes of this anime</h3></div> }
-      Episodes can be watched on <b>Crunchyroll</b>
+     
     </div>
     
   )
